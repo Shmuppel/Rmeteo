@@ -6,7 +6,7 @@ get_meteo <- function(var, agg_level, time_scale, from=NULL, to=NULL, time=NULL,
   if (is.null(time) & (is.null(from) | is.null(to))) {stop("time or from/to parameters are missing")}
   if (is.null(lat) | is.null(lon)) {stop("lat/lon parameters are missing")}
   # Construct the URL for the dailymeteo.com API endpoint
-  url <- "https://dev-api.dailymeteo.gilab.rs/meteo/pq/"
+  url <- "https://api.dailymeteo.com/meteo/pq/"
   # Set query parameters
   query <- list(
     var = var,
