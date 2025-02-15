@@ -92,7 +92,7 @@ pred.strk <- function (data, # data.frame(id,x,y,time,obs,ec1,ec2,...) | STFDF -
   }
   
   # check if data@time and newdata@time are of same class
-  if (class(index(data@time)) != class(index(newdata@time))){
+  if (!identical(class(index(data@time)), class(index(newdata@time)))){
     stop(paste('The argument data and newdata must have time of the same class! ', class(index(data@time)), ' != ', class(index(newdata@time)) , sep=""))
   }
   
